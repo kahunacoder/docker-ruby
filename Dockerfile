@@ -1,9 +1,5 @@
-FROM debian:jessie
+FROM ruby:2.3
 MAINTAINER "Gary Smith" <docker@kc.gs>
 
-RUN apt-get update && apt-get install -y \
-    python-software-properties \
-    ruby2.3 \
-    ruby2.3-dev \
-	&& gem install sass \
+RUN gem install sass \
 	&& gem install mailcatcher
